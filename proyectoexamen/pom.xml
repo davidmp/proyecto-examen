@@ -14,11 +14,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-<dependency>
-	<groupId>postgresql</groupId>
-	<artifactId>postgresql</artifactId>
-	<version>9.1-901.jdbc4</version>
-</dependency>
+
+
 
     <dependencies>
         <dependency>
@@ -27,6 +24,11 @@
             <version>6.0</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+	<groupId>postgresql</groupId>
+	<artifactId>postgresql</artifactId>
+	<version>9.1-901.jdbc4</version>
+    </dependency>
     </dependencies>
 
     <build>
