@@ -24,7 +24,7 @@ public void getConexionDb(){
     try {
         DriverManager.registerDriver(new Driver());
         if(con==null){
-        con=DriverManager.getConnection("jdbc:postgresql://localhost:5432/cultura","cultura", "123456");
+        con=DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","examen", "123456");
         
         System.out.println("Conexion Exitosa.....!!!");
         }
