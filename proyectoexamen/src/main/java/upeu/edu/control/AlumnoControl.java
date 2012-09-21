@@ -42,9 +42,16 @@ public class AlumnoControl extends HttpServlet {
               // estoy redireccionando a donde quiero que vaya para que muestre mi vista jsp en esta caso ira a insert
                 case "I":{
                 
-                
                 response.sendRedirect("Acceso/Modulos/Alumno/insert.jsp");
                 }break; 
+                
+                // aca insertaremos por el metodo post que recibiremos desde el jsp insert
+                case "1":
+                {
+                
+                    
+                }break;
+                   
           } 
         } finally {            
             out.close();
