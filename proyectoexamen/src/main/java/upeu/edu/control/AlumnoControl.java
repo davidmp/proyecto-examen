@@ -57,23 +57,23 @@ public class AlumnoControl extends HttpServlet {
                     
                 }break;
                    
-                case 3:{//mi case eliminar
-                ab=new AlumnoBussines();
-                int idAlum=Integer.parseInt(request.getParameter("codigo"));
-                ab.eliminarAlumno(idAlum);
-                
-                response.sendRedirect("Acceso/Modulos/Alumno/reporte.jsp");
+                case 3:{//mi case eliminarçç
+                    
+                    //codigo de reporte 
+                response.sendRedirect("Acceso/Modulos/Alumno/delete.jsp");
                 
                 }
                     
                 case 4:{
                 
                     //recuperar id  
+                    //reporte la lista
+                    
                     
                     ab=new AlumnoBussines();
-                    AlumnoTO to=ab.buscarAlumnoid(request.getParameter("idalumno"));
-                    request.getSession().setAttribute("listaalumno", to);
-                    response.sendRedirect("Acceso/Modulos/Alumno/eliminarxcodigo.jsp");
+                    ab.eliminarAlumno(request);    
+                    //reporte la lista
+                    response.sendRedirect("Acceso/Modulos/Alumno/delete.jsp");
                     
                     
                 }break;    

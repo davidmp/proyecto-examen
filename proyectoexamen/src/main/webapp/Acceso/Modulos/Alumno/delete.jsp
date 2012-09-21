@@ -15,35 +15,32 @@
         <h1>Hello World!</h1>
         
         
-        <form name="delete" action="reporte.jsp" method="POST">
-        
+        form name="actualizar" action="../../../AlumnoControl" method="POST">
             <table border="1">
                 <thead>
                     <tr>
-                        <th></th>
-                        <th></th>
+                        <th colspan="4">Formulario Actualizar Alumno</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>codigo</td>
-                        <td> <input type="text" name="codigo" value="" /></td>
+                        <td>Ingrese Codigo para borrar</td>
+                        <td><input type="text" name="codigo" id="codigo" value="" /></td>
                     </tr>
+                        
                     <tr>
-                        <td> </td>
-                        <td><input type="hidden" name="opt" value="1"/>    
-                            <input type="submit" value="Guardar" name="guardar" />
-                            <input type="button" value="Cancelar" name="cancelar"  /></td> 
-                        
-                        
-                        
-                        
-                        
+                        <td colspan="2"> 
+                            <input type="hidden" name="opt" value="4"/>    
+                            <input type="submit" value="Borrar" name="actualizar" />
+                            <input type="button" value="Cancelar" name="cancelar"  />
+                        </td>
+                       
                     </tr>
+                   
                 </tbody>
             </table>
 
-        
         </form>
         
     </body>

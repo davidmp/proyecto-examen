@@ -28,10 +28,11 @@ public class AlumnoBussines {
         dao.insertarAlumno(to);        
     }
      
-     public void eliminarAlumno(int idAlum){
+     public void eliminarAlumno(HttpServletRequest r){
      
      dao=new AlumnoDAO();
-     dao.eliminarAlumno(idAlum);
+     String codigo_captura=r.getParameter("codigo")==null?"":r.getParameter("codigo");
+     dao.eliminarAlumno(codigo_captura);
      
      
      }

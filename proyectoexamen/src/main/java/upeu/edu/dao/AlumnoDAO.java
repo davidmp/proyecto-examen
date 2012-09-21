@@ -35,12 +35,12 @@ public class AlumnoDAO extends DBConn{
     }
    
    
-   public void eliminarAlumno(int id_alumno){
+   public void eliminarAlumno(String codigo){
    
        try {
            getConexionDb();
-           ps=con.prepareStatement("delete from examen.alumno where id_alumno=?");
-           ps.setInt(1, id_alumno);
+           ps=con.prepareStatement("delete from examen.alumno where codigo=?");
+           ps.setString(1, codigo);
            
            if (ps.executeUpdate()==1) {
                System.out.println("la eliminacion ha sido un exito");
