@@ -35,5 +35,12 @@ public class AlumnoBussines {
      
      
      }
-      
+
+     public AlumnoTO buscarAlumnoid (String id){
+     
+     dao=new AlumnoDAO();
+     return dao.buscarAlumnoid(id);
+     
+     }
 }
+
