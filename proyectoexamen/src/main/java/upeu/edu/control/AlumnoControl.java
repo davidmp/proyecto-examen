@@ -39,6 +39,7 @@ public class AlumnoControl extends HttpServlet {
         try {
             
           switch(opt){
+              // estoy redireccionando a donde quiero que vaya para que muestre mi vista jsp en esta caso ira a insert
                 case "I":{
                 
                 
