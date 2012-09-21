@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import upeu.edu.bussines.AlumnoBussines;
+import upeu.edu.to.AlumnoTO;
 
 /**
  *
@@ -64,6 +65,20 @@ public class AlumnoControl extends HttpServlet {
                 response.sendRedirect("Acceso/Modulos/Alumno/reporte.jsp");
                 
                 }
+                    
+                case 4:{
+                
+                    //recuperar id  
+                    
+                    ab=new AlumnoBussines();
+                    AlumnoTO to=ab.buscarAlumnoid(request.getParameter("idalumno"));
+                    request.getSession().setAttribute("listaalumno", to);
+                    response.sendRedirect("Acceso/Modulos/Alumno/eliminarxcodigo.jsp");
+
+                    
+                }break;    
+                    
+                    
           } 
         } finally {            
             out.close();
