@@ -13,9 +13,7 @@ public class AlumnoDAO extends DBConn{
         int r=0;
         try {
             getConexionDb();
-           ps=con.prepareStatement("insert into "
-                   +"alumno(codigo, nombre, apellidos, eap, sexo, email, telefono, estado) "
-                   + "values (?, ?, ?, ?, ?, ?, ?, ?)"); 
+           ps=con.prepareStatement("INSERT INTO examen.alumno( codigo, nombre, apellidos, eap, sexo, email, telefono,  estado)  VALUES (?, ?, ?, ?, ?, ?, ?,?);"); 
             ps.setString(1, to.getCodigo());
             ps.setString(2, to.getNombre());
             ps.setString(3, to.getApellidos());
