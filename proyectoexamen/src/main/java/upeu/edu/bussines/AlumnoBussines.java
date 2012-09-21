@@ -27,5 +27,13 @@ public class AlumnoBussines {
         to.setEstado(r.getParameter("estado")==null?"":r.getParameter("estado"));
         dao.insertarAlumno(to);        
     }
+     
+     public void eliminarAlumno(int idAlum){
+     
+     dao=new AlumnoDAO();
+     dao.eliminarAlumno(idAlum);
+     
+     
+     }
       
 }

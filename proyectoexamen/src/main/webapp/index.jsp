@@ -16,7 +16,7 @@
         <%--  aca estamos referenciando que nos vamos a la clase alumno control
         se entra al switch con en la opcion I--%>
          <a href="AlumnoControl?opt=I">Ir MainAlumno insertar </a>
-        
+         <a href="AlumnoControl?opt=3">Ir a mi reporte</a>
         
         
         

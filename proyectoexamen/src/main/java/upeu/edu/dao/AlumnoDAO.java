@@ -32,6 +32,54 @@ public class AlumnoDAO extends DBConn{
         }
 
         return r;
-    }  
+    }
+   
+   
+   public void eliminarAlumno(int id_alumno){
+   
+       try {
+           getConexionDb();
+           ps=con.prepareStatement("delete from examen.alumno where id_alumno=?");
+           ps.setInt(1, id_alumno);
+           
+           if (ps.executeUpdate()==1) {
+               System.out.println("la eliminacion ha sido un exito");
+               
+           }
+       } catch (Exception e) {
+       
+           
+       } finally{
+       getCerrarConexion();
+       }
+       
+   
+       
+   }
+   
+   public AlumnoTO buscarAlumnoid (String idAlumno) {
+   
+   AlumnoTO alumno=new AlumnoTO();
+       try {
+           getConexionDb();
+           ps=con.prepareStatement("select * from examen.alumno where id_alumno=?");
+           ps.setInt(1, Integer.parseInt(idAlumno));
+           rs=ps.executeQuery();
+           if (rs.next())  {
+               alumno.setId_alumno(rs.getInt("id_alumno"));
+               alumno.setCodigo(rs.getString("codigo"));
+               alumno.setNombre(rs.getString("nombre"));
+               alumno.setApellidos(rs.getString("apellidos"));
+               alumno.setEap(rs.getString("eap"));
+               alumno.setSexo(rs.getString("sexo"));
+               alumno.setEmail(rs.getString("email"));
+               alumno.setTelefono(rs.getString("telefono"));
+               alumno.setEstado(rs.getString("estado"));
+           }
+       } catch (Exception e) {
+       }
+       
+       return alumno;
+   } 
     
 }
