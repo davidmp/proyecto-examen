@@ -12,6 +12,7 @@
         <h1> Jose Byrne probando </h1>
         <h1> Probando....!! </h1>
         <h1> nanlabus probando probando</h1>
+        <h1> de nuevo probando...byrne</h1>
         
          <a href="AlumnoControl?opt=I">Ir MainAlumno insertar </a>
         
