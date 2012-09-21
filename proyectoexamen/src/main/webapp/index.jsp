@@ -13,6 +13,8 @@
         <h1> Probando....!! </h1>
         <h1> nanlabus probando probando</h1>
         
+         <a href="AlumnoControl?opt=I">Ir MainAlumno insertar </a>
+        
         
         
         

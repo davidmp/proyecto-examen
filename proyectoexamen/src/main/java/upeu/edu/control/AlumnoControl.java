@@ -37,12 +37,14 @@ public class AlumnoControl extends HttpServlet {
         String opt= request.getParameter("opt");
         AlumnoBussines ab;
         try {
-           
             
-            
-            
-            
-           
+          switch(opt){
+                case "I":{
+                
+                
+                response.sendRedirect("Acceso/Modulos/Alumno/insert.jsp");
+                }break; 
+          } 
         } finally {            
             out.close();
         }
