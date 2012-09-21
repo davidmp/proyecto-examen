@@ -6,6 +6,7 @@ package upeu.edu.control;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -46,9 +47,13 @@ public class AlumnoControl extends HttpServlet {
                 }break; 
                 
                 // aca insertaremos por el metodo post que recibiremos desde el jsp insert
+                // y llamamo al bussienes que en si es que se encarga de insertar
                 case "1":
                 {
-                
+                ab=new AlumnoBussines();
+                ab.insertarAlumno(request);
+                ab=new AlumnoBussines();
+                response.sendRedirect("Acceso/Modulos/Alumno/insert.jsp");
                     
                 }break;
                    
