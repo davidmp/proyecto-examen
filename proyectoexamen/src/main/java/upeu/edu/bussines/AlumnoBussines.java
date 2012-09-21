@@ -42,5 +42,22 @@ public class AlumnoBussines {
      return dao.buscarAlumnoid(id);
      
      }
+     public void actualizarAlumno(HttpServletRequest r){
+      AlumnoTO to = new AlumnoTO();
+        dao = new AlumnoDAO();        
+        to.setCodigo(r.getParameter("codigo")==null?"":r.getParameter("codigo"));
+        to.setNombre(r.getParameter("nombre")==null?"":r.getParameter("nombre"));
+        to.setApellidos(r.getParameter("apellidos")==null?"":r.getParameter("apellidos"));
+        to.setEap(r.getParameter("eap")==null?"":r.getParameter("eap"));
+        to.setSexo(r.getParameter("sexo")==null?"":r.getParameter("sexo"));
+        to.setEmail(r.getParameter("email")==null?"":r.getParameter("email"));
+        to.setTelefono(r.getParameter("telefono")==null?"":r.getParameter("telefono"));
+        to.setEstado(r.getParameter("estado")==null?"":r.getParameter("estado"));
+        dao.actualizarAlumno(to);
+         
+     
+     
+     
+     }
 }
 
