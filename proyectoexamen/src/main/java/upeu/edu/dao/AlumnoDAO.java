@@ -81,6 +81,8 @@ public class AlumnoDAO extends DBConn{
        
        return alumno;
    } 
+   
+   //Mi metodo actualizar alumno................ :D
    public void actualizarAlumno (AlumnoTO to){
    int r=0;
         try {
