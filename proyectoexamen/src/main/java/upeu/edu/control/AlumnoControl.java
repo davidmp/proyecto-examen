@@ -74,7 +74,7 @@ public class AlumnoControl extends HttpServlet {
                     AlumnoTO to=ab.buscarAlumnoid(request.getParameter("idalumno"));
                     request.getSession().setAttribute("listaalumno", to);
                     response.sendRedirect("Acceso/Modulos/Alumno/eliminarxcodigo.jsp");
-
+                    
                     
                 }break;    
                     
