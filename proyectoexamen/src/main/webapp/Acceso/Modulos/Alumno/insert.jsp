@@ -65,7 +65,7 @@
                     </tr>
                     <tr>
                         <td colspan="2"> 
-                            <input type="hidden" name="opt" value="2"/>    
+                            <input type="hidden" name="opt" value="1"/>    
                             <input type="submit" value="Guardar" name="guardar" />
                             <input type="button" value="Cancelar" name="cancelar"  />
                         </td>

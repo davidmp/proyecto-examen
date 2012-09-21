@@ -81,33 +81,5 @@ public class AlumnoDAO extends DBConn{
        
        return alumno;
    } 
-   public void actualizarAlumno (AlumnoTO to){
-   int r=0;
-        try {
-            getConexionDb();
-           ps=con.prepareStatement("UPDATE examen.alumno SET nombre=?, apellidos=?, eap=?, sexo=?, email=?, telefono=?, estado=?WHERE codigo=?;"); 
-            
-            ps.setString(1, to.getNombre());
-            ps.setString(2, to.getApellidos());
-            ps.setString(3, to.getEap());
-            ps.setString(4, to.getSexo());
-            ps.setString(5, to.getEmail());
-            ps.setString(6, to.getTelefono());
-            ps.setString(7, to.getEstado());
-            ps.setString(8, to.getCodigo());
-            if (ps.executeUpdate() == 1) {
-                r=1;    
-                System.out.println("Hecho!!!");
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-
-      
-   
-   
-   
-   }
-   
     
 }

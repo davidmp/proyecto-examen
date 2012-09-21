@@ -77,25 +77,7 @@ public class AlumnoControl extends HttpServlet {
 
                     
                 }break;    
-                     case 5:{
-                
-                    // Chahuarez implementa el codigo de reportar acaaaaaaaaaaa!!!! attt narda
                     
-                         
-                   response.sendRedirect("Acceso/Modulos/Alumno/actualizar.jsp");
-
-                    
-                }break; 
-                         case 6:{
-                
-                    // Chahuarez implementa el codigo de reportar acaaaaaaaaaaa!!!! attt narda
-                    
-                   ab= new AlumnoBussines();
-                   ab.actualizarAlumno(request);
-                   response.sendRedirect("Acceso/Modulos/Alumno/actualizar.jsp");
-
-                    
-                }break; 
                     
           } 
         } finally {            
