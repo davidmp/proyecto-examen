@@ -25,7 +25,7 @@ public void getConexionDb(){
     try {
         DriverManager.registerDriver(new Driver());
         if(con==null){
-        con=DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","alumno", "123456");
+        con=DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgresq","alumno", "123456");
         
         System.out.println("Conexion Exitosa.....!!!");
         }
@@ -42,5 +42,5 @@ public void getCerrarConexion(){
         if (con!=null) {con.close();}
     } catch (Exception e) {
     }
-} 
+}
 }

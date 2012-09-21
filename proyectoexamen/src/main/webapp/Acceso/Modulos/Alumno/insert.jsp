@@ -13,7 +13,8 @@
     </head>
     <body>
         <h1>formulario de insert!</h1>
-       <form name="Form Alumno" method="post" action="../../../AlumnoControl">
+       
+        <form name="Form Alumno" method="post" action="../../../AlumnoControl">
             <table border="1">
                 <thead>
                     <tr>
@@ -66,7 +67,7 @@
                         <td colspan="2"> 
                             <input type="hidden" name="opt" value="1"/>    
                             <input type="submit" value="Guardar" name="guardar" />
-                            <input type="button" value="Cancelar" name="cancelar" />
+                            <input type="button" value="Cancelar" name="cancelar"  />
                         </td>
                        
                     </tr>

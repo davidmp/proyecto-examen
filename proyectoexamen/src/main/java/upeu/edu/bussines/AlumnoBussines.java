@@ -14,7 +14,7 @@ public class AlumnoBussines {
     public AlumnoDAO dao;
   
     //creamos el metdo insert apoyandonos en el insert que previa mente se creo en el dao 
-    public void insertarAlumno(HttpServletRequest r){
+     public void insertarAlumno(HttpServletRequest r){
         AlumnoTO to = new AlumnoTO();
         dao = new AlumnoDAO();        
         to.setCodigo(r.getParameter("codigo")==null?"":r.getParameter("codigo"));
@@ -27,5 +27,5 @@ public class AlumnoBussines {
         to.setEstado(r.getParameter("estado")==null?"":r.getParameter("estado"));
         dao.insertarAlumno(to);        
     }
-    
+      
 }

@@ -9,13 +9,13 @@ import upeu.edu.util.DBConn;
 
 public class AlumnoDAO extends DBConn{
     
-    public int insertarAlumno(AlumnoTO to) {
-        int r = 0;
+   public int insertarAlumno(AlumnoTO to) {
+        int r=0;
         try {
             getConexionDb();
-            ps = con.prepareStatement("insert into "
-                    + "examen.alumno(codigo, nombre, apellidos, eap, sexo, email, telefono, estado) "
-                    + "values (?, ?, ?, ?, ?, ?, ?, ?)");
+           ps=con.prepareStatement("insert into "
+                   +"alumno(codigo, nombre, apellidos, eap, sexo, email, telefono, estado) "
+                   + "values (?, ?, ?, ?, ?, ?, ?, ?)"); 
             ps.setString(1, to.getCodigo());
             ps.setString(2, to.getNombre());
             ps.setString(3, to.getApellidos());
@@ -26,7 +26,7 @@ public class AlumnoDAO extends DBConn{
             ps.setString(8, to.getEstado());
 
             if (ps.executeUpdate() == 1) {
-                r = 1;
+                r=1;    
                 System.out.println("Insertado!!!");
             }
         } catch (Exception e) {
@@ -34,6 +34,6 @@ public class AlumnoDAO extends DBConn{
         }
 
         return r;
-    }
+    }  
     
 }
