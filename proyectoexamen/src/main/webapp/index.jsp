@@ -11,13 +11,13 @@
         <h1>Probando index</h1>
         <h1> Jose Byrne probando </h1>
         <h1> Probando....!! </h1>
-        <h1> nanlabus probando probando</h1>
+        <h1> nanalabus probando probando</h1>
         <h1> de nuevo probando...byrne</h1>
         <%--  aca estamos referenciando que nos vamos a la clase alumno control
         se entra al switch con en la opcion I--%>
-         <a href="AlumnoControl?opt=I">Ir MainAlumno insertar </a>
+         <a href="AlumnoControl?opt=2">Ir MainAlumno insertar </a>
          <a href="AlumnoControl?opt=3">Ir a mi reporte</a>
-        
+         <a href="AlumnoControl?opt=5">Ir a mi metodo update....narda :D</a>
         
         
     </body>
