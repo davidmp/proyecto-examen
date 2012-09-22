@@ -15,7 +15,7 @@
         <h1>Hello World!</h1>
         
         
-        form name="actualizar" action="../../../AlumnoControl" method="POST">
+      <form name="actualizar" action="../../../AlumnoControl" method="POST">
             <table border="1">
                 <thead>
                     <tr>
