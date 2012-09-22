@@ -11,6 +11,9 @@
         <meta http-equiv="Content-Type" content="text/ht
     </head>ml; charset=UTF-8">
         <title>Nanalabus</title>
+        <%-- aca tiene que ir todo el reporte --%>   
+        <%-- aca tiene que ir todo el reporte --%>   
+        <%-- aca tiene que ir todo el reporte --%>   
     <body>
         <%--Aqui estoy creando el formulario.....  --%>
         <h1>Aqui esta formulario de actualizar</h1>
@@ -76,6 +79,7 @@
             </table>
 
         </form>
+         <a href="../../../index.jsp">Ir al index</a>
         
         
     

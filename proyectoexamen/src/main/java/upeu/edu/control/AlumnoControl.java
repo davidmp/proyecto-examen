@@ -39,7 +39,7 @@ public class AlumnoControl extends HttpServlet {
               // estoy redireccionando a donde quiero que vaya para que muestre mi vista jsp en esta caso ira a insert
                 case 1:{
                 // mi case reportar 
-                    
+                // aca tiene que estar los reportes     
                    
                 response.sendRedirect("Acceso/Modulos/Alumno/insert.jsp");
                 }break; 
@@ -50,15 +50,15 @@ public class AlumnoControl extends HttpServlet {
                     
                     // mi case insertar
                 {
+                    // aca tiene que estar los reportes   
                 ab=new AlumnoBussines();
                 ab.insertarAlumno(request);
-                ab=new AlumnoBussines();
                 response.sendRedirect("Acceso/Modulos/Alumno/insert.jsp");
                     
                 }break;
                    
                 case 3:{//mi case eliminarçç
-                    
+                    // aca tiene que estar los reportes   
                     //codigo de reporte 
                 response.sendRedirect("Acceso/Modulos/Alumno/delete.jsp");
                 
@@ -67,6 +67,7 @@ public class AlumnoControl extends HttpServlet {
                 case 4:{
                 
                     //recuperar id  
+                    // aca tiene que estar los reportes   
                     //reporte la lista
                     
                     
@@ -78,7 +79,7 @@ public class AlumnoControl extends HttpServlet {
                     
                 }break;    
                      case 5:{
-                
+                // aca tiene que estar los reportes   
                     // Chahuarez implementa el codigo de reportar acaaaaaaaaaaa!!!! attt narda
                     
                          
@@ -87,7 +88,7 @@ public class AlumnoControl extends HttpServlet {
                     
                 }break; 
                          case 6:{
-                
+                // aca tiene que estar los reportes   
                     // Chahuarez implementa el codigo de reportar acaaaaaaaaaaa!!!! attt narda
                     
                    ab= new AlumnoBussines();

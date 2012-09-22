@@ -13,7 +13,9 @@
     </head>
     <body>
         <h1>formulario de insert!</h1>
-       
+       <%-- aca tiene que ir todo el reporte --%>   
+       <%-- aca tiene que ir todo el reporte --%>   
+       <%-- aca tiene que ir todo el reporte --%>   
         <form name="Form Alumno" method="post" action="../../../AlumnoControl">
             <table border="1">
                 <thead>
@@ -76,6 +78,7 @@
             </table>
 
         </form>
+        <a href="../../../index.jsp">Ir al index</a>
         
         
     </body>

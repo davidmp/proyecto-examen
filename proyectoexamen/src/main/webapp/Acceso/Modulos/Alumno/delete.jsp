@@ -12,9 +12,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        
-        
+        <h1>Actualizar!</h1>
+<%-- aca tiene que ir todo el reporte --%>        
+ <%-- aca tiene que ir todo el reporte --%>  
+ <%-- aca tiene que ir todo el reporte --%>   
       <form name="actualizar" action="../../../AlumnoControl" method="POST">
             <table border="1">
                 <thead>
@@ -42,6 +43,7 @@
             </table>
 
         </form>
+       <a href="../../../index.jsp">Ir al index</a>
         
     </body>
 </html>
