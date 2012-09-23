@@ -4,6 +4,8 @@
  */
 package upeu.edu.dao;
 
+import java.util.ArrayList;
+import java.util.List;
 import upeu.edu.to.AlumnoTO;
 import upeu.edu.util.DBConn;
 
@@ -32,6 +34,41 @@ public class AlumnoDAO extends DBConn{
         }
 
         return r;
+    }
+   public List reporteAlumno() {   //list:return del mismo tipo
+        List reporte = new ArrayList();
+        AlumnoTO to;
+        try {
+            getConexionDb();
+          ps = con.prepareStatement("SELECT * FROM examen.alumno;");
+            rs = ps.executeQuery();
+            while (rs.next()) {
+               to = new AlumnoTO();
+                to.setId_alumno(rs.getInt("id_alumno"));
+                to.setCodigo(rs.getString("codigo"));
+                to.setNombre(rs.getString("nombre"));
+                to.setApellidos(rs.getString("apellidos"));
+                to.setEap(rs.getString("eap"));
+                to.setSexo(rs.getString("sexo"));
+                to.setEmail(rs.getString("email"));
+                to.setTelefono(rs.getString("telefono"));
+                to.setEstado(rs.getString("estado"));
+
+
+                reporte.add(to);
+                
+                
+                System.out.println("Reportado..!");
+                
+            }
+        } catch (Exception e) {
+            System.out.println("Error en Reporte alumno..." + e.getMessage());
+        }
+        finally {
+         getCerrarConexion();
+        }
+        return reporte;
+
     }
    
    

@@ -5,16 +5,54 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%@page language="java" import="upeu.edu.to.AlumnoTO" %>
+<%@page language="java" import="java.util.List" %>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/ht
     </head>ml; charset=UTF-8">
         <title>Nanalabus</title>
-        <%-- aca tiene que ir todo el reporte --%>   
-        <%-- aca tiene que ir todo el reporte --%>   
-        <%-- aca tiene que ir todo el reporte --%>   
-    <body>
+            <body>
+        
+        <table border="1">
+            <thead>
+                <tr><%-- //filaaa--%>
+                    <th colspan="5" style="color: brown; background-color: bisque">Reporte de Alumnos</th><%-- TH columnaa cuando estamos en HEAD--%>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#</td><%--TD columna cuando estamos en cuerpo BODY--%>
+                    <td>Codigo</td>
+                    <td>Nombre</td>
+                    <td>Apellidos</td>
+                    <td>Telefono</td>
+                 
+                </tr>
+               <% 
+              List<AlumnoTO> lista=null;
+              lista=(List<AlumnoTO>)request.getSession().getAttribute("listaAlumno");
+              int i=0;
+              if(lista!=null){
+              for(AlumnoTO to: lista){//este for no acepta nulos
+                %> 
+                <tr>
+                    <td><%=++i%></td>
+                    <td><%=to.getCodigo()%></td>
+                    <td><%=to.getNombre()%></td>
+                    <td><% out.print(to.getApellidos());%></td>
+                    <td><% out.print(to.getTelefono()); %></td>
+                  
+                </tr>
+                <% }
+                }  %>
+
+            </tbody>
+        </table>
+              
         <%--Aqui estoy creando el formulario.....  --%>
         <h1>Aqui esta formulario de actualizar</h1>
         <form name="actualizar" action="../../../AlumnoControl" method="POST">

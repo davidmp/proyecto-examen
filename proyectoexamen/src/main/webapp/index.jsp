@@ -15,7 +15,7 @@
         <h1> de nuevo probando...byrne</h1>
         <%--  aca estamos referenciando que nos vamos a la clase alumno control
         se entra al switch con en la opcion I--%>
-         <a href="AlumnoControl?opt=2">Ir MainAlumno insertar Bonnier</a>
+         <a href="AlumnoControl?opt=1">Ir MainAlumno insertar Bonnier</a>
          <a href="AlumnoControl?opt=3">Ir a Maim Alumno Delete Byrne</a>
          <a href="AlumnoControl?opt=5">Ir a mi metodo update....narda :D</a>
         

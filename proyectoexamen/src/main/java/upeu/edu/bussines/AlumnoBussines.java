@@ -4,6 +4,7 @@
  */
 package upeu.edu.bussines;
 
+import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import upeu.edu.dao.AlumnoDAO;
 import upeu.edu.to.AlumnoTO;
@@ -36,6 +37,11 @@ public class AlumnoBussines {
      
      
      }
+     
+      public List reportarAlumno(){    
+        dao=new AlumnoDAO();
+        return  dao.reporteAlumno();
+    }
 
      public AlumnoTO buscarAlumnoid (String id){
      

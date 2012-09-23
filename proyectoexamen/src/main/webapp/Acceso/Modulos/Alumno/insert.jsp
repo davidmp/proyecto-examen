@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page language="java" import="upeu.edu.to.AlumnoTO" %>
+<%@page language="java" import="java.util.List" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,9 +15,44 @@
     </head>
     <body>
         <h1>formulario de insert!</h1>
-       <%-- aca tiene que ir todo el reporte --%>   
-       <%-- aca tiene que ir todo el reporte --%>   
-       <%-- aca tiene que ir todo el reporte --%>   
+       
+         <table border="1">
+            <thead>
+                <tr><%-- //filaaa--%>
+                    <th colspan="5" style="color: brown; background-color: bisque">Reporte de Alumnos</th><%-- TH columnaa cuando estamos en HEAD--%>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#</td><%--TD columna cuando estamos en cuerpo BODY--%>
+                    <td>Codigo</td>
+                    <td>Nombre</td>
+                    <td>Apellidos</td>
+                    <td>Telefono</td>
+                 
+                </tr>
+               <% 
+              List<AlumnoTO> lista=null;
+              lista=(List<AlumnoTO>)request.getSession().getAttribute("listaAlumno");
+              int i=0;
+              if(lista!=null){
+              for(AlumnoTO to: lista){//este for no acepta nulos
+                %> 
+                <tr>
+                    <td><%=++i%></td>
+                    <td><%=to.getCodigo()%></td>
+                    <td><%=to.getNombre()%></td>
+                    <td><% out.print(to.getApellidos());%></td>
+                    <td><% out.print(to.getTelefono()); %></td>
+                  
+                </tr>
+                <% }
+                }  %>
+
+            </tbody>
+        </table>
+                
         <form name="Form Alumno" method="post" action="../../../AlumnoControl">
             <table border="1">
                 <thead>

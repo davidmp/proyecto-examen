@@ -6,6 +6,7 @@ package upeu.edu.control;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,8 +39,9 @@ public class AlumnoControl extends HttpServlet {
           switch(opt){
               // estoy redireccionando a donde quiero que vaya para que muestre mi vista jsp en esta caso ira a insert
                 case 1:{
-                // mi case reportar 
-                // aca tiene que estar los reportes     
+                ab=new AlumnoBussines();
+                List listaAlumno=ab.reportarAlumno();
+                request.getSession().setAttribute("listaAlumno", listaAlumno);
                    
                 response.sendRedirect("Acceso/Modulos/Alumno/insert.jsp");
                 }break; 
@@ -53,13 +55,16 @@ public class AlumnoControl extends HttpServlet {
                     // aca tiene que estar los reportes   
                 ab=new AlumnoBussines();
                 ab.insertarAlumno(request);
-                response.sendRedirect("Acceso/Modulos/Alumno/insert.jsp");
+                ab=new AlumnoBussines();
+                List listaAlumno=ab.reportarAlumno();
+                request.getSession().setAttribute("listaAlumno", listaAlumno);response.sendRedirect("Acceso/Modulos/Alumno/insert.jsp");
                     
                 }break;
                    
                 case 3:{//mi case eliminarçç
-                    // aca tiene que estar los reportes   
-                    //codigo de reporte 
+                   ab=new AlumnoBussines();
+                List listaAlumno=ab.reportarAlumno();
+                request.getSession().setAttribute("listaAlumno", listaAlumno);
                 response.sendRedirect("Acceso/Modulos/Alumno/delete.jsp");
                 
                 }
@@ -69,11 +74,13 @@ public class AlumnoControl extends HttpServlet {
                     //recuperar id  
                     // aca tiene que estar los reportes   
                     //reporte la lista
-                    
-                    
+               
                     ab=new AlumnoBussines();
                     ab.eliminarAlumno(request);    
                     //reporte la lista
+                    ab=new AlumnoBussines();
+                List listaAlumno=ab.reportarAlumno();
+                request.getSession().setAttribute("listaAlumno", listaAlumno);
                     response.sendRedirect("Acceso/Modulos/Alumno/delete.jsp");
                     
                     
@@ -81,7 +88,9 @@ public class AlumnoControl extends HttpServlet {
                      case 5:{
                 // aca tiene que estar los reportes   
                     // Chahuarez implementa el codigo de reportar acaaaaaaaaaaa!!!! attt narda
-                    
+                    ab=new AlumnoBussines();
+                List listaAlumno=ab.reportarAlumno();
+                request.getSession().setAttribute("listaAlumno", listaAlumno);
                          
                    response.sendRedirect("Acceso/Modulos/Alumno/actualizar.jsp");
 
@@ -93,6 +102,9 @@ public class AlumnoControl extends HttpServlet {
                     
                    ab= new AlumnoBussines();
                    ab.actualizarAlumno(request);
+                   ab=new AlumnoBussines();
+                List listaAlumno=ab.reportarAlumno();
+                request.getSession().setAttribute("listaAlumno", listaAlumno);
                    response.sendRedirect("Acceso/Modulos/Alumno/actualizar.jsp");
 
                     
